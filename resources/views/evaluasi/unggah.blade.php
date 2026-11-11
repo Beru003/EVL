@@ -17,20 +17,19 @@
             sebelum dokumen Anda tersebar.
         </p>
     </div>
-    <section>
-        <h2>
-            Dokumen baru
-        </h2>
+    <section class="unggah-card" aria-labelledby="dokumen-baru">
+        <div class="unggah-card-header">
+            <h2 id="dokumen-baru"><span aria-hidden="true">⇧</span> Dokumen baru</h2>
+            <small>PPT · PPTX · PDF</small>
+        </div>
         <div class="drop">
-            <b class="icon">
+            <b class="icon" aria-hidden="true">
                 ⇧
             </b>
-            <h2>
-                Seret dan lepas dokumen di sini
-            </h2>
-            <p>
-                atau pilih berkas dari perangkat Anda
-            </p>
+            <div class="unggah-hint">
+                <h2>Seret dan lepas dokumen di sini</h2>
+                <p>atau pilih berkas dari perangkat Anda</p>
+            </div>
             <a class="button" href="{{ route('pratinjau') }}">
                 ＋ Pilih Berkas
             </a>
@@ -42,42 +41,38 @@
             Prototipe ini membuka pratinjau dokumen contoh.
         </p>
     </section>
-    <p class="center steps">
+    <h2 class="center steps">
         CARA KERJA
-    </p>
+    </h2>
     <div class="trio">
         <section>
-            <h3>
-                01 · Unggah dokumen
-            </h3>
+            <span class="unggah-step-icon" aria-hidden="true">⇧</span>
+            <h3><span>01</span> Unggah dokumen</h3>
             <p>
-                Pilih dokumen yang ingin diperiksa.
+                Pilih dokumen PPT, PPTX, atau PDF yang ingin diperiksa dari perangkat Anda.
             </p>
         </section>
         <section>
-            <h3>
-                02 · Pratinjau dan evaluasi
-            </h3>
+            <span class="unggah-step-icon" aria-hidden="true">▤</span>
+            <h3><span>02</span> Pratinjau dan evaluasi</h3>
             <p>
-                Tinjau dokumen sebelum mengevaluasinya.
+                Pratinjau dokumen, lalu tekan tombol Evaluasi untuk memulai pemeriksaan informasi sensitif.
             </p>
         </section>
         <section>
-            <h3>
-                03 · Tinjau hasil evaluasi
-            </h3>
+            <span class="unggah-step-icon" aria-hidden="true">◇</span>
+            <h3><span>03</span> Tinjau hasil evaluasi</h3>
             <p>
-                Lihat skor, temuan, dan rekomendasi.
+                Lihat skor risiko, informasi yang terdeteksi, dan rekomendasi perlindungan yang tepat.
             </p>
         </section>
     </div>
-    <section>
-        <h3>
-            ⓘ Catatan penting
-        </h3>
-        <p>
-            Gunakan dokumen dengan teks yang dapat dibaca dan tanpa perlindungan kata sandi.
-        </p>
+    <section class="unggah-note">
+        <span class="unggah-step-icon" aria-hidden="true">ⓘ</span>
+        <div>
+            <h3>Catatan penting</h3>
+            <p>Pastikan dokumen tidak dilindungi kata sandi agar dapat diproses. Gunakan berkas dengan teks yang dapat dibaca untuk hasil evaluasi yang optimal.</p>
+        </div>
     </section>
 </main>
 @endsection

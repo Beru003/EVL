@@ -1,0 +1,135 @@
+.auth.halaman-masuk {
+    min-height: 100vh;
+    padding: 24px;
+    gap: 0;
+    align-items: stretch;
+    background: linear-gradient(90deg, #000, #1a0000 60%, #3d0000);
+}
+.masuk-identitas {
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+}
+.masuk-pesan {
+    margin: auto 0;
+}
+.masuk-pesan h1,
+.masuk-pesan h2 {
+    font-size: 40px;
+    line-height: 1.5;
+}
+.masuk-pesan > p {
+    max-width: 520px;
+    margin: 24px 0;
+    font-size: 16px;
+}
+.masuk-ilustrasi {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 260px;
+    height: 260px;
+    margin: 40px auto 48px;
+    border: 1px solid #95010155;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ff000040, transparent 70%);
+}
+.masuk-ilustrasi::before {
+    position: absolute;
+    inset: 29px;
+    content: '';
+    border: 1px solid #95010166;
+    border-radius: 50%;
+}
+.masuk-perisai {
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 124px;
+    height: 144px;
+    border: 1px solid #580d0d;
+    border-radius: 32px;
+    background: #280d0d;
+}
+.masuk-privasi {
+    position: absolute;
+    z-index: 2;
+    bottom: 38px;
+    left: -24px;
+    background: #100202;
+}
+.masuk-fitur {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    color: #d4a0a0;
+    font-size: 12px;
+}
+.masuk-fitur li {
+    margin: 0;
+}
+.masuk-kredit {
+    margin: 24px 0 0;
+    font-size: 11px;
+}
+.halaman-masuk .masuk-panel {
+    min-height: max(850px, calc(100vh - 48px));
+    margin: 0;
+    padding: 48px clamp(32px, 5vw, 72px);
+    border: 0;
+    border-radius: 28px;
+    background: #0d0000;
+}
+.masuk-panel h2,
+.masuk-panel h1 {
+    margin: 12px 0;
+    font-size: 28px;
+    line-height: 1.5;
+}
+.masuk-panel form,
+.daftar-kolom {
+    margin-top: 32px;
+}
+.masuk-panel input:not([type='checkbox']) {
+    min-height: 54px;
+}
+.masuk-panel .masuk-opsi {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #d4a0a0;
+    font-size: 12px;
+}
+.masuk-opsi input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    accent-color: #950101;
+}
+.masuk-panel .button {
+    min-height: 52px;
+}
+
+.auth.halaman-daftar {
+    gap: 48px;
+    min-height: 1000px;
+    background: linear-gradient(90deg, #000, #3d0000);
+}
+
+.halaman-daftar .masuk-panel {
+    min-height: 952px;
+}
+
+.halaman-daftar .masuk-identitas {
+    padding-left: 0;
+}
+.masuk-catatan {
+    margin-top: 32px;
+    padding-top: 12px;
+    border-top: 1px solid #530a06;
+    font-size: 12px;
+}
+.halaman-masuk :focus-visible {
+    outline: 2px solid #fff0f0;
+    outline-offset: 4px;
+}

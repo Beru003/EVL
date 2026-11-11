@@ -1,7 +1,7 @@
 @extends('layouts.evl')
 @section('judul', 'Hasil Evaluasi')
 @section('konten')
-<main>
+<main class="hasil-page">
     <div class="bar">
         <div>
             <a href="{{ route('unggah') }}">
@@ -27,9 +27,10 @@
         <x-dokumen hasil />
         <div>
             <section>
-                <h2>
-                    Ringkasan Risiko
-                </h2>
+                <div class="bar">
+                    <h2>Ringkasan Risiko</h2>
+                    <small class="hasil-status">Evaluasi selesai</small>
+                </div>
                 <div class="score">
                     <strong>
                         85,60
@@ -44,12 +45,14 @@
                         <small>
                             ● Tinggi
                         </small>
+                        <p>Tingkat Risiko</p>
+                        <span class="text-lg text-red-400">Tinggi</span>
                         <p>
                             Perlu ditinjau sebelum dibagikan.
                         </p>
                     </div>
                 </div>
-                <progress max="100" value="85.6">
+                <progress max="100" value="85.6" aria-label="Skor risiko">
                     85,60
                 </progress>
                 <p class="bar">
@@ -65,9 +68,10 @@
                 </p>
             </section>
             <section>
-                <h2>
-                    Informasi Sensitif yang Ditemukan
-                </h2>
+                <div class="bar">
+                    <h2>Informasi Sensitif yang Ditemukan</h2>
+                    <span class="text-xs text-red-400">3 temuan</span>
+                </div>
                 <table>
                     <thead>
                         <tr>
@@ -97,7 +101,7 @@
                                 Salindia 3
                             </td>
                             <td>
-                                Tinggi
+                                <small>Tinggi</small>
                             </td>
                         </tr>
                         <tr>
@@ -111,7 +115,7 @@
                                 Salindia 5
                             </td>
                             <td>
-                                Sedang
+                                <small class="hasil-sedang">Sedang</small>
                             </td>
                         </tr>
                         <tr>
@@ -125,12 +129,12 @@
                                 Salindia 7
                             </td>
                             <td>
-                                Sedang
+                                <small class="hasil-sedang">Sedang</small>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <p>
+                <p class="hasil-catatan">
                     Data sensitif disamarkan untuk menjaga privasi.
                 </p>
             </section>
@@ -138,7 +142,7 @@
                 <h2>
                     Rekomendasi
                 </h2>
-                <ol>
+                <ol class="hasil-rekomendasi">
                     <li>
                         Hapus atau samarkan NIK pada salindia 3.
                     </li>
@@ -149,6 +153,9 @@
                         Tinjau ulang dokumen sebelum dibagikan kepada publik.
                     </li>
                 </ol>
+                <p class="hasil-catatan border-t border-[#3d0000] pt-4 text-red-400">
+                    Evaluasi ulang setelah perbaikan untuk memastikan risiko telah berkurang.
+                </p>
             </section>
         </div>
     </div>

@@ -1,16 +1,19 @@
 @extends('layouts.evl')
 @section('judul', 'Pratinjau Dokumen')
 @section('konten')
-<main>
-    <p>
+<main class="pratinjau-page">
+    <nav class="pratinjau-breadcrumb" aria-label="Lokasi halaman">
         <a href="{{ route('unggah') }}">
             Unggah Dokumen
         </a>
-        / Pratinjau Dokumen
-    </p>
-    <p class="steps">
-        ① Unggah Dokumen　　② Pratinjau Dokumen　　③ Hasil Evaluasi
-    </p>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Pratinjau Dokumen</span>
+    </nav>
+    <ol class="pratinjau-stepper" aria-label="Langkah evaluasi">
+        <li><span>1</span> Unggah Dokumen</li>
+        <li aria-current="step"><span>2</span> Pratinjau Dokumen</li>
+        <li><span>3</span> Hasil Evaluasi</li>
+    </ol>
     <div class="preview">
         <x-dokumen />
         <aside>
@@ -36,9 +39,10 @@
                         </div>
                     @endforeach
                 </dl>
-                <small>
-                    ✓ Siap untuk dievaluasi
-                </small>
+                <div class="pratinjau-status">
+                    <strong>Siap untuk dievaluasi</strong>
+                    Dokumen contoh berhasil dimuat.
+                </div>
             </section>
             <section>
                 <h2>
@@ -47,13 +51,11 @@
                 <p>
                     Tinjau contoh deteksi informasi sensitif dan skor risiko kebocoran.
                 </p>
-                <p>
-                    ✓ Informasi pribadi
-                    <br>
-                    ✓ Informasi keuangan sensitif
-                    <br>
-                    ✓ Skor risiko per salindia
-                </p>
+                <ul class="pratinjau-daftar">
+                    <li><span aria-hidden="true">✓</span> Informasi pribadi</li>
+                    <li><span aria-hidden="true">✓</span> Informasi keuangan sensitif</li>
+                    <li><span aria-hidden="true">✓</span> Skor risiko per salindia</li>
+                </ul>
                 <a class="button wide" href="{{ route('hasil') }}">
                     Evaluasi
                 </a>
@@ -61,6 +63,9 @@
                     ← Ganti Dokumen
                 </a>
             </section>
+            <p class="pratinjau-catatan">
+                Tinjau dokumen sebelum menekan Evaluasi.
+            </p>
         </aside>
     </div>
 </main>

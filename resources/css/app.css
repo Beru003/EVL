@@ -1,4 +1,9 @@
 @import 'tailwindcss';
+@import './unggah.css';
+@import './masuk.css';
+@import './pratinjau.css';
+@import './hasil.css';
+@import './riwayat.css';
 @source '../views/**/*.blade.php';
 
 :root {

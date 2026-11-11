@@ -1,0 +1,108 @@
+.hasil-page {
+    padding: 28px 40px 32px;
+    background: linear-gradient(90deg, #000, #1a0000 60%, #3d0000);
+}
+
+.hasil-page h1 {
+    font-size: 26px;
+}
+
+.hasil-page .result {
+    grid-template-columns: minmax(0, 520fr) minmax(0, 816fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.hasil-page section {
+    background: #0d0000;
+    border-color: #3d0000;
+    border-radius: 20px;
+}
+
+.hasil-page .viewer > .bar {
+    min-height: 68px;
+    background: transparent;
+    border-bottom: 1px solid #3d0000;
+}
+
+.hasil-page .slide {
+    width: calc(100% - 78px);
+    max-width: 440px;
+    margin: 16px auto;
+}
+
+.hasil-page .slide h3 {
+    display: grid;
+    height: 18%;
+    padding: 0;
+    place-items: center;
+    background: linear-gradient(90deg, #3d0000, #950101);
+}
+
+.hasil-page .thumbs {
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 1px solid #3d0000;
+}
+
+.hasil-page .score {
+    min-height: 155px;
+}
+
+.hasil-page .score strong small {
+    display: block;
+    padding: 0;
+    background: none;
+    text-align: center;
+}
+
+.hasil-page progress {
+    display: block;
+    height: 12px;
+    appearance: none;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #1a0000;
+}
+
+.hasil-page progress::-webkit-progress-bar {
+    background: #1a0000;
+}
+
+.hasil-page progress::-webkit-progress-value {
+    border-radius: 999px;
+    background: #ff0000;
+}
+
+.hasil-page th {
+    height: 40px;
+    background: #1a0000;
+}
+
+.hasil-page td {
+    height: 68px;
+}
+
+.hasil-page .hasil-status {
+    background: #10281c;
+    color: #8ae3ac;
+}
+
+.hasil-page .hasil-sedang {
+    background: #301f00;
+    color: #ffd274;
+}
+
+.hasil-page .hasil-catatan {
+    margin: 16px 0 0;
+    font-size: 12px;
+}
+
+.hasil-page .hasil-rekomendasi li {
+    margin-bottom: 16px;
+}
+
+.hasil-page :focus-visible {
+    outline: 2px solid #fff0f0;
+    outline-offset: 4px;
+}

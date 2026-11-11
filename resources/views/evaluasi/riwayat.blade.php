@@ -1,31 +1,34 @@
 @extends('layouts.evl')
 @section('judul', 'Riwayat Evaluasi')
 @section('konten')
-<div class="history">
+<div class="history riwayat-page">
     <aside>
-        <h2>
+        <h2 class="flex items-center gap-2.5">
+            <img src="{{ asset('images/LOGO%20EVL.svg') }}" alt="" width="44" height="44" class="object-contain">
             EVALUASI RISIKO
         </h2>
         <p>
             Sistem Evaluasi Risiko Kebocoran Informasi
         </p>
-        <small>
+        <a class="riwayat-aktif" href="{{ route('riwayat') }}" aria-current="page">
             Riwayat Evaluasi
-        </small>
+        </a>
         <p>
             <a href="{{ route('unggah') }}">
                 ← Ke Halaman Utama
             </a>
         </p>
-        <form method="POST" action="{{ route('keluar') }}" class="mt-8">
-            @csrf
-            <button class="button secondary">
-                Keluar
-            </button>
-        </form>
+        <div class="riwayat-sidebar-bawah">
+            <p>Contoh riwayat evaluasi</p>
+            <form method="POST" action="{{ route('keluar') }}">
+                @csrf
+                <button class="button secondary" type="submit">Keluar</button>
+            </form>
+        </div>
     </aside>
     <main>
-        <div class="bar">
+        <p class="riwayat-lokasi">Ruang kerja / Riwayat Evaluasi</p>
+        <div class="bar riwayat-judul">
             <div>
                 <h1>
                     Riwayat Evaluasi
@@ -39,9 +42,10 @@
             </a>
         </div>
         <section>
-            <h2>
-                Cari evaluasi
-            </h2>
+            <div class="bar">
+                <h2>Cari evaluasi</h2>
+                <p>5 dokumen contoh</p>
+            </div>
             <div class="filters">
                 <label>
                     Nama dokumen
@@ -69,9 +73,10 @@
             </div>
         </section>
         <section>
-            <h2>
-                Daftar Evaluasi
-            </h2>
+            <div class="bar">
+                <h2>Daftar Evaluasi</h2>
+                <p>Terbaru lebih dulu</p>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -109,6 +114,7 @@
                             </td>
                             <td>
                                 {{ $nama }}
+                                <p>{{ strtoupper(pathinfo($nama, PATHINFO_EXTENSION)) }} · Evaluasi selesai</p>
                             </td>
                             <td>
                                 {{ $tanggal }} Mei 2024
@@ -117,7 +123,7 @@
                                 {{ $skor }}
                             </td>
                             <td>
-                                <small>
+                                <small class="risiko-{{ strtolower($kategori) }}">
                                     {{ $kategori }}
                                 </small>
                             </td>
