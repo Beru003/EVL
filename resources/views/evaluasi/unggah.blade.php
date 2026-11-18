@@ -1,7 +1,7 @@
 @extends('layouts.evl')
 @section('judul', 'Unggah Dokumen')
 @section('konten')
-<main class="landing">
+<main class="landing" id="konten-utama">
     <div class="hero">
         <small>
             ● Unggah · Pratinjau · Evaluasi
@@ -41,7 +41,7 @@
             Prototipe ini membuka pratinjau dokumen contoh.
         </p>
     </section>
-    <h2 class="center steps">
+    <h2 class="center steps" id="cara-kerja">
         CARA KERJA
     </h2>
     <div class="trio">

@@ -7,6 +7,7 @@
     @vite('resources/css/app.css')
 </head>
 <body @if (request()->routeIs('unggah')) class="halaman-unggah" @endif>
+    <a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
     @unless (request()->routeIs('masuk', 'daftar', 'riwayat'))
         <header class="bar">
             @if (request()->routeIs('unggah'))
@@ -29,7 +30,7 @@
                 @endunless
                 <a href="{{ route('riwayat') }}">Riwayat Evaluasi</a>
                 @if (session('prototipe_masuk'))
-                    <span class="avatar" aria-label="Pengguna demo">P</span>
+                    <span class="avatar" role="img" aria-label="Pengguna demo">P</span>
                     <form method="POST" action="{{ route('keluar') }}">
                         @csrf
                         <button class="button secondary">Keluar</button>

@@ -36,12 +36,12 @@
     padding: 16px;
     border-radius: 12px;
     background: #1a0000;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .riwayat-lokasi {
     margin: 8px 0 40px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .riwayat-judul {
@@ -61,12 +61,13 @@
 
 .riwayat-page section .bar > p {
     margin: 0 0 14px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .riwayat-page .filters {
     grid-template-columns: minmax(140px, 1fr) 182px 214px auto;
 }
+.riwayat-page .filter-note { font-size: 14px; }
 
 .riwayat-page .button {
     background: #950101;
@@ -88,7 +89,7 @@
 
 .riwayat-page td p {
     margin: 2px 0 0;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .riwayat-page .risiko-sedang {

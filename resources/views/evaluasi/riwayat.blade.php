@@ -10,14 +10,16 @@
         <p>
             Sistem Evaluasi Risiko Kebocoran Informasi
         </p>
-        <a class="riwayat-aktif" href="{{ route('riwayat') }}" aria-current="page">
-            Riwayat Evaluasi
-        </a>
-        <p>
-            <a href="{{ route('unggah') }}">
-                ← Ke Halaman Utama
+        <nav aria-label="Navigasi riwayat">
+            <a class="riwayat-aktif" href="{{ route('riwayat') }}" aria-current="page">
+                Riwayat Evaluasi
             </a>
-        </p>
+            <p>
+                <a href="{{ route('unggah') }}">
+                    ← Ke Halaman Utama
+                </a>
+            </p>
+        </nav>
         <div class="riwayat-sidebar-bawah">
             <p>Contoh riwayat evaluasi</p>
             <form method="POST" action="{{ route('keluar') }}">
@@ -26,7 +28,7 @@
             </form>
         </div>
     </aside>
-    <main>
+    <main id="konten-utama">
         <p class="riwayat-lokasi">Ruang kerja / Riwayat Evaluasi</p>
         <div class="bar riwayat-judul">
             <div>
@@ -46,6 +48,7 @@
                 <h2>Cari evaluasi</h2>
                 <p>5 dokumen contoh</p>
             </div>
+            <p class="filter-note">Filter belum tersedia pada prototipe ini.</p>
             <div class="filters">
                 <label>
                     Nama dokumen
@@ -77,25 +80,27 @@
                 <h2>Daftar Evaluasi</h2>
                 <p>Terbaru lebih dulu</p>
             </div>
+            <div class="table-scroll" role="region" aria-label="Daftar evaluasi" tabindex="0">
             <table>
+                <caption class="sr-only">Daftar lima contoh evaluasi dokumen, diurutkan dari yang terbaru</caption>
                 <thead>
                     <tr>
-                        <th>
+                        <th scope="col">
                             No.
                         </th>
-                        <th>
+                        <th scope="col">
                             Nama Dokumen
                         </th>
-                        <th>
+                        <th scope="col">
                             Tanggal Unggah
                         </th>
-                        <th>
+                        <th scope="col">
                             Skor Risiko
                         </th>
-                        <th>
+                        <th scope="col">
                             Kategori
                         </th>
-                        <th>
+                        <th scope="col">
                             Aksi
                         </th>
                     </tr>
@@ -140,6 +145,7 @@
                     @endforeach
                 </tbody>
             </table>
+            </div>
             <p>
                 Menampilkan 5 contoh evaluasi
             </p>

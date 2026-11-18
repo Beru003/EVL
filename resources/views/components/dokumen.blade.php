@@ -1,6 +1,6 @@
 @props(['hasil' => false])
-<section class="viewer">
-    <div class="bar"><span>▤　Proposal Penelitian.pptx</span><small>Salindia {{ $hasil ? 3 : 1 }} / 9</small></div>
+<section class="viewer" aria-labelledby="judul-viewer">
+    <h2 class="bar viewer-title" id="judul-viewer"><span aria-hidden="true">▤</span><span>Proposal Penelitian.pptx</span><small>Salindia {{ $hasil ? 3 : 1 }} dari 9</small></h2>
     <div class="slide">
         <h3>PROPOSAL PENELITIAN</h3>
         <div class="slide-content">
@@ -14,9 +14,9 @@
             <p>Tinjau isi salindia sebelum dibagikan.</p>
         </div>
     </div>
-    <div class="thumbs" aria-label="Indikator salindia">
+    <ol class="thumbs" aria-label="Indikator salindia">
         @foreach ($hasil ? range(1, 9) : [1, 2, 3, 4, 5, '+4 lagi'] as $nomor)
-            <small class="{{ $nomor === ($hasil ? 3 : 1) ? 'selected' : '' }}">{{ $nomor }}</small>
+            <li @if ($nomor === ($hasil ? 3 : 1)) aria-current="step" @endif>{{ $nomor }}</li>
         @endforeach
-    </div>
+    </ol>
 </section>

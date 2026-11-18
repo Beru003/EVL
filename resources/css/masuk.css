@@ -18,6 +18,7 @@
     font-size: 40px;
     line-height: 1.5;
 }
+.masuk-slogan { font-size: 40px; line-height: 1.5; color: #ffeded; }
 .masuk-pesan > p {
     max-width: 520px;
     margin: 24px 0;
@@ -63,14 +64,14 @@
     flex-wrap: wrap;
     gap: 12px 24px;
     color: #d4a0a0;
-    font-size: 12px;
+    font-size: 14px;
 }
 .masuk-fitur li {
     margin: 0;
 }
 .masuk-kredit {
     margin: 24px 0 0;
-    font-size: 11px;
+    font-size: 14px;
 }
 .halaman-masuk .masuk-panel {
     min-height: max(850px, calc(100vh - 48px));
@@ -98,11 +99,11 @@
     align-items: center;
     gap: 8px;
     color: #d4a0a0;
-    font-size: 12px;
+    font-size: 14px;
 }
 .masuk-opsi input {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     margin: 0;
     accent-color: #950101;
 }
@@ -127,7 +128,7 @@
     margin-top: 32px;
     padding-top: 12px;
     border-top: 1px solid #530a06;
-    font-size: 12px;
+    font-size: 14px;
 }
 .halaman-masuk :focus-visible {
     outline: 2px solid #fff0f0;

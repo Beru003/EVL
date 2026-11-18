@@ -2,7 +2,7 @@
 @section('judul', 'Daftar')
 
 @section('konten')
-<main class="auth halaman-masuk halaman-daftar">
+<main class="auth halaman-masuk halaman-daftar" id="konten-utama">
     <div class="masuk-identitas order-2">
         <a class="brand inline-flex items-center gap-2.5" href="{{ route('unggah') }}">
             <img src="{{ asset('images/LOGO%20EVL.svg') }}" alt="" width="44" height="44" class="object-contain">
@@ -15,7 +15,7 @@
                 </div>
                 <small class="masuk-privasi">Informasi terlindungi</small>
             </div>
-            <h2>Kenali risikonya.<br>Lindungi informasinya.</h2>
+            <p class="masuk-slogan">Kenali risikonya.<br>Lindungi informasinya.</p>
             <p>Evaluasi dokumen sebelum dibagikan. Temukan informasi sensitif dan ambil langkah perlindungan yang tepat.</p>
             <ul class="masuk-fitur">
                 <li>Deteksi informasi sensitif</li>
@@ -32,22 +32,22 @@
             <div class="daftar-kolom">
                 <label>
                     Nama pengguna
-                    <input type="text" placeholder="Masukkan nama pengguna">
+                    <input id="nama-daftar" name="name" type="text" autocomplete="name" placeholder="Masukkan nama pengguna">
                 </label>
                 <label>
                     Alamat posel
-                    <input type="email" placeholder="Masukkan alamat posel Anda">
+                    <input id="email-daftar" name="email" type="email" autocomplete="email" placeholder="Masukkan alamat posel Anda">
                 </label>
                 <label>
                     Kata sandi
-                    <input type="password" placeholder="Masukkan kata sandi">
+                    <input id="password-daftar" name="password" type="password" autocomplete="new-password" placeholder="Masukkan kata sandi">
                 </label>
                 <label>
                     Konfirmasi kata sandi
-                    <input type="password" placeholder="Masukkan kembali kata sandi">
+                    <input id="password-konfirmasi" name="password_confirmation" type="password" autocomplete="new-password" placeholder="Masukkan kembali kata sandi">
                 </label>
                 <label class="masuk-opsi">
-                    <input type="checkbox">
+                    <input id="ingat-daftar" name="remember" type="checkbox">
                     Ingat saya
                 </label>
                 <a class="button wide" href="{{ route('masuk') }}">Daftar →</a>

@@ -1,7 +1,7 @@
 @extends('layouts.evl')
 @section('judul', 'Pratinjau Dokumen')
 @section('konten')
-<main class="pratinjau-page">
+    <main class="pratinjau-page" id="konten-utama">
     <nav class="pratinjau-breadcrumb" aria-label="Lokasi halaman">
         <a href="{{ route('unggah') }}">
             Unggah Dokumen
@@ -9,6 +9,7 @@
         <span aria-hidden="true">/</span>
         <span aria-current="page">Pratinjau Dokumen</span>
     </nav>
+    <h1 class="sr-only">Pratinjau Dokumen</h1>
     <ol class="pratinjau-stepper" aria-label="Langkah evaluasi">
         <li><span>1</span> Unggah Dokumen</li>
         <li aria-current="step"><span>2</span> Pratinjau Dokumen</li>

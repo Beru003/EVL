@@ -2,7 +2,7 @@
 @section('judul', 'Masuk')
 
 @section('konten')
-<main class="auth halaman-masuk">
+<main class="auth halaman-masuk" id="konten-utama">
     <div class="masuk-identitas">
         <a class="brand inline-flex items-center gap-2.5" href="{{ route('unggah') }}">
             <img src="{{ asset('images/LOGO%20EVL.svg') }}" alt="" width="44" height="44" class="object-contain">
@@ -15,7 +15,7 @@
                 </div>
                 <small class="masuk-privasi">Informasi terlindungi</small>
             </div>
-            <h1>Kenali risikonya.<br>Lindungi informasinya.</h1>
+            <p class="masuk-slogan">Kenali risikonya.<br>Lindungi informasinya.</p>
             <p>Evaluasi dokumen sebelum dibagikan. Temukan informasi sensitif dan ambil langkah perlindungan yang tepat.</p>
             <ul class="masuk-fitur">
                 <li>Deteksi informasi sensitif</li>
@@ -27,20 +27,20 @@
     <section class="auth-form masuk-panel" aria-labelledby="judul-masuk">
         <div>
             <small>AKSES SISTEM</small>
-            <h2 id="judul-masuk">Sistem Evaluasi Risiko Kebocoran Informasi</h2>
+            <h1 id="judul-masuk">Masuk ke Sistem Evaluasi Risiko</h1>
             <p>Selamat datang kembali. Masuk untuk melanjutkan evaluasi dokumen Anda.</p>
             <form method="POST" action="{{ route('masuk.demo') }}">
                 @csrf
                 <label>
                     Alamat posel
-                    <input type="email" placeholder="Masukkan alamat posel Anda">
+                    <input id="email-masuk" name="email" type="email" autocomplete="email" placeholder="Masukkan alamat posel Anda">
                 </label>
                 <label>
                     Kata sandi
-                    <input type="password" placeholder="Masukkan kata sandi">
+                    <input id="password-masuk" name="password" type="password" autocomplete="current-password" placeholder="Masukkan kata sandi">
                 </label>
                 <label class="masuk-opsi">
-                    <input type="checkbox">
+                    <input id="ingat-masuk" name="remember" type="checkbox">
                     Ingat saya
                 </label>
                 <button class="button wide" type="submit">Masuk →</button>

@@ -1,7 +1,7 @@
 @extends('layouts.evl')
 @section('judul', 'Hasil Evaluasi')
 @section('konten')
-<main class="hasil-page">
+<main class="hasil-page" id="konten-utama">
     <div class="bar">
         <div>
             <a href="{{ route('unggah') }}">
@@ -72,19 +72,21 @@
                     <h2>Informasi Sensitif yang Ditemukan</h2>
                     <span class="text-xs text-red-400">3 temuan</span>
                 </div>
+                <div class="table-scroll" role="region" aria-label="Informasi sensitif yang ditemukan" tabindex="0">
                 <table>
+                    <caption class="sr-only">Informasi sensitif yang ditemukan pada dokumen</caption>
                     <thead>
                         <tr>
-                            <th>
+                            <th scope="col">
                                 Jenis Informasi
                             </th>
-                            <th>
+                            <th scope="col">
                                 Temuan
                             </th>
-                            <th>
+                            <th scope="col">
                                 Lokasi
                             </th>
-                            <th>
+                            <th scope="col">
                                 Tingkat
                             </th>
                         </tr>
@@ -134,6 +136,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
                 <p class="hasil-catatan">
                     Data sensitif disamarkan untuk menjaga privasi.
                 </p>

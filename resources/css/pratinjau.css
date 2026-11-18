@@ -106,7 +106,7 @@
     margin: 20px 0;
     padding: 14px 0;
     border-block: 1px solid #360909;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .pratinjau-status,
@@ -115,7 +115,7 @@
     border-radius: 12px;
     background: #230202;
     color: #d4a0a0;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .pratinjau-status strong {
@@ -126,7 +126,7 @@
 .pratinjau-daftar {
     list-style: none;
     margin: 14px 0;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .pratinjau-page .wide {

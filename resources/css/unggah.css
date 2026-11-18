@@ -114,7 +114,8 @@
     align-items: center;
     min-height: 46px;
     margin: 0;
-    background: #ff0000;
+    background: #a30800;
+    color: #fff;
 }
 .halaman-unggah a:focus-visible {
     outline: 2px solid #fff0f0;
@@ -161,3 +162,9 @@
     background: transparent;
     border: 0;
 }
+.halaman-unggah .unggah-subtitle { font-size: 13px; }
+.halaman-unggah .drop p,
+.halaman-unggah .unggah-card > p,
+.halaman-unggah .unggah-hint p,
+.halaman-unggah .trio p,
+.halaman-unggah .unggah-note p { font-size: 14px; }
