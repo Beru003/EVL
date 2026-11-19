@@ -1,4 +1,8 @@
 @extends('layouts.evl')
+@section('navbar')
+    @include('components.navbar')
+@endsection
+
 @section('judul', 'Unggah Dokumen')
 @section('konten')
 <main class="landing" id="konten-utama">

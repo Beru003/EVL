@@ -1,4 +1,8 @@
 @extends('layouts.evl')
+@section('navbar')
+    @include('components.navbar')
+@endsection
+
 @section('judul', 'Pratinjau Dokumen')
 @section('konten')
     <main class="pratinjau-page" id="konten-utama">

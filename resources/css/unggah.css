@@ -2,24 +2,6 @@
     background: linear-gradient(90deg, #000, #1a0000 60%, #3d0000);
     color: #fff0f0;
 }
-.halaman-unggah > header {
-    height: 68px;
-    padding: 0 48px;
-    background: #0a000080;
-    border-bottom-color: #3d000050;
-}
-.unggah-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 15px;
-}
-.unggah-subtitle {
-    display: block;
-    color: #d4a0a0;
-    font-size: 10px;
-    font-weight: 400;
-}
 .halaman-unggah .landing {
     padding-block: 0;
 }

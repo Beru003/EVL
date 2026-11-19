@@ -4,6 +4,7 @@
 @import './pratinjau.css';
 @import './hasil.css';
 @import './riwayat.css';
+@import './navbar.css';
 @source '../views/**/*.blade.php';
 
 :root {
@@ -18,8 +19,7 @@ body {
     color: #ffeded;
     font: 16px/1.55 Inter, system-ui, sans-serif;
 }
-header, footer { background: #0d0202; padding: 16px 3.5%; }
-header { min-height: 68px; border-bottom: 1px solid var(--line); }
+footer { background: #0d0202; padding: 16px 3.5%; }
 footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 nav { display: flex; align-items: center; gap: 20px; }
 a:hover { color: #ff958f; }
@@ -88,22 +88,7 @@ input::placeholder { color: #cda09e; opacity: 1; }
 .auth-form h1 { margin: 12px 0; }
 .auth-form label { display: block; margin: 19px 0; }
 
-.skip-link {
-    position: absolute;
-    z-index: 1000;
-    top: 8px;
-    left: 8px;
-    transform: translateY(-160%);
-    padding: 12px 16px;
-    border-radius: 8px;
-    background: #fff;
-    color: #260000;
-}
-.skip-link:focus { transform: translateY(0); }
-:where(a, button, input, select, textarea, [tabindex]):focus-visible {
-    outline: 3px solid #fff;
-    outline-offset: 3px;
-}
+
 .table-scroll { max-width: 100%; overflow-x: auto; }
 .table-scroll:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
 th, td { min-width: 5rem; }
@@ -111,8 +96,6 @@ button, .button, input[type="checkbox"] { min-height: 24px; }
 input[type="checkbox"] { min-width: 24px; min-height: 24px; }
 
 @media (max-width: 800px) {
-    header.bar { flex-wrap: wrap; gap: 12px; }
-    header nav { flex-wrap: wrap; gap: 12px; }
     .trio, .preview, .result, .history, .auth { grid-template-columns: minmax(0, 1fr); }
     .history { min-height: auto; padding: 24px; }
     .history aside { padding: 16px 0; }
@@ -128,8 +111,7 @@ input[type="checkbox"] { min-width: 24px; min-height: 24px; }
     .slide { width: calc(100% - 24px); min-height: 240px; }
 }
 @media (max-width: 480px) {
-    header, footer { padding: 14px 16px; }
-    .halaman-unggah > header { height: auto; padding: 12px 16px; }
+    footer { padding: 14px 16px; }
     .halaman-unggah > footer { padding: 24px 16px; }
     main, .hasil-page, .pratinjau-page { padding: 20px 16px; }
     .hero h1 { font-size: clamp(32px, 10vw, 42px); }
